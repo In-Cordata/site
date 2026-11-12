@@ -274,3 +274,44 @@ footer a.link:hover{color:var(--accent1)}
 
 .file-embed .pages{height:440px;overflow-y:auto;background:#f4f1ec;padding:8px;display:flex;flex-direction:column;gap:8px}
 .file-embed .pages img{width:100%;height:auto;display:block;box-shadow:0 1px 4px rgba(0,0,0,.18);background:#fff}
+
+/* ====== Adattamento a tablet e telefoni (ultimo blocco: vince sui precedenti) ====== */
+img,iframe,video,table{max-width:100%}
+.photo{max-width:100%;height:auto}
+a,p,li,td,h1,h2,h3{overflow-wrap:anywhere}
+.table-scroll,section>table{display:block;overflow-x:auto}
+@media (max-width:900px){
+  .two-col,.two-col.big,.side-map{grid-template-columns:1fr !important;gap:18px}
+  .two-col .photo,.two-col img{display:block;width:100%;max-width:520px;margin:0 auto}
+  .two-col.big .photo{max-width:460px}
+  .gallery-strip.full{grid-template-columns:1fr}
+  .page-head.has-quote{grid-template-columns:1fr;gap:20px}
+  .quote{font-size:20px;padding-left:26px}
+  .home-grid{grid-template-columns:1fr !important}
+  .hero-banner{width:100%;height:auto}
+}
+@media (max-width:600px){
+  body{font-size:17px;line-height:1.55}
+  .wrap{padding:14px 16px 0;margin-top:12px}
+  section{margin-top:34px;margin-bottom:24px}
+  h1,.page-head h1{font-size:30px}
+  h2{font-size:23px}
+  .page-head{padding:20px 18px;gap:16px}
+  .quote{font-size:19px;padding:4px 0 0 22px}
+  .qmark{left:6px;top:-18px;font-size:54px}
+  .grid-cards,.roles,.album-grid{grid-template-columns:1fr}
+  .photo-grid{grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:6px}
+  .card,.news,.tile{padding:16px}
+  .file-list:has(.file-embed){grid-template-columns:1fr}
+  .file-embed{max-width:none}
+  .file-embed .pages{height:380px}
+  .file-row{width:100%;align-self:stretch}
+  .btn-prev,.btn-dl{padding:9px 16px;font-size:16px}
+  .home-calendar iframe{height:520px}
+  .map-wrap iframe{height:260px}
+  .nav-bar{padding:8px 12px}
+  .brand{font-size:15px}
+  footer{padding-left:16px;padding-right:16px}
+  footer .contacts-columns{gap:18px}
+  .contacts-col{min-width:0}
+}
